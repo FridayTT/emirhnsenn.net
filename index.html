@@ -51,7 +51,7 @@
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/background.jpeg');
             background-size: cover;
             background-position: center;
-            margin-top: 35px;
+            margin-top: 29px;
         }
 
         .hero-text h1 {
@@ -167,7 +167,35 @@
             color: #000;
         }
 
-        /* İkonlar için Bootstrap Icons Linki (Head kısmına eklemeyi unutma) */
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            border-color: #444 !important;
+        }
+
+        .social-btn:hover {
+            background-color: var(--brand-yellow) !important;
+            border-color: var(--brand-yellow) !important;
+            color: #000 !important;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        /* Hem sol hem sağ kart için geçerli güçlü hover efekti */
+        #contact .card {
+            transition: all 0.3s ease-in-out !important;
+        }
+
+        #contact .card:hover {
+            border-color: #ffcc00 !important;
+            /* Doğrudan renk kodu verelim garanti olsun */
+            box-shadow: 0 5px 20px rgba(255, 204, 0, 0.2) !important;
+        }
     </style>
 </head>
 
@@ -175,7 +203,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#home">
                 <img src="assets/images/logo.png" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
@@ -363,8 +391,7 @@
     <div class="container" id="contact" style="padding-top: 10%;">
         <div class="row justify-content-center">
             <div class="col-md-4 mb-4">
-                <div class="card p-4 h-100 shadow-sm border-0"
-                    style="background: #0b0b0b; border: 1px solid #333 !important;">
+                <div class="card p-4 h-100 shadow-sm contact-card">
                     <h5 class="mb-4 text-warning fw-light" style="letter-spacing: 2px; text-transform: uppercase;">
                         Contact Information</h5>
 
@@ -383,6 +410,10 @@
                         <a href="https://www.instagram.com/emirhnsenn" target="_blank"
                             class="btn btn-outline-light btn-sm rounded-circle social-btn">
                             <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@emirhnsenn" target="_blank"
+                            class="btn btn-outline-light btn-sm rounded-circle social-btn">
+                            <i class="bi bi-tiktok"></i>
                         </a>
                         <a href="https://twitter.com/emirhnsenn" target="_blank"
                             class="btn btn-outline-light btn-sm rounded-circle social-btn">
@@ -439,5 +470,3 @@
 </body>
 
 </html>
-
-
